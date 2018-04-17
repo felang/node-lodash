@@ -1,0 +1,29 @@
+{
+  "name": "lodash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "should": "^13.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felang/node-lodash.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felang/node-lodash/issues"
+  },
+  "homepage": "https://github.com/felang/node-lodash#readme"
+}
