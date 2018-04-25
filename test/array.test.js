@@ -1,11 +1,11 @@
 /*
 *  mocha 测试用例
 * */
-
 const arrLodash = require('../lib/array')
 const should = require('should')
 
-const isEqual = arrLodash.isEqual
+const isEqual = require('../lib/equal')
+
 describe('test lodash array function', function () {
 	it('chunk function test 1', function () {
 		isEqual(arrLodash.chunk([1, 2, 3], 2), [[1, 2], [3]]).should.equal(true);
@@ -36,8 +36,15 @@ describe('test lodash array function', function () {
 	});
 
 	it('compact function test 2', function () {
-		isEqual(arrLodash.compact([1, 2, '', 0, null], [1, 2]).should.equal(true));
+		isEqual(arrLodash.compact([1, 2, '', 0, null]), [1, 2]).should.equal(true);
 	});
 
+	it('contact function test 1', function () {
+		isEqual(arrLodash.contact(1, 2, [[3]]), [1, 2, [3]]).should.equal(true);
+	});
+
+	it('contact function test 2', function () {
+		isEqual(arrLodash.contact(1, 2, [3]), [1, 2, 3]).should.equal(true);
+	});
 });
 
